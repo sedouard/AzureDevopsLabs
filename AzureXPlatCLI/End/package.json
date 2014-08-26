@@ -1,0 +1,15 @@
+{
+  "name": "DevSetup",
+  "version": "1.0.0",
+  "description": "DevSetup",
+  "main": "DevSetup.js",
+  "author": {
+    "name": "sedouard",
+    "email": "sedouard@microsoft.com"
+  },
+  "dependencies": {
+    "nconf": "^0.6.9",
+	"async": "0.9.x",
+	"azure-scripty":"1.0.x"
+  }
+}

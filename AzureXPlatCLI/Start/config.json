@@ -1,0 +1,13 @@
+{
+	"vnet_name":"<VIRTUAL_NETWORK_NAME>",
+	"vm_count": "3",
+	"vm_image_name": "<YOUR_DESIRED_VM_IMAGE>",
+	"vm_base_name":"<YOUR_BASE_MACHINE_NAME>",
+	"vm_username":"<YOUR_VM_USER_NAME>",
+	"vm_password":"<YOUR_VM_PASSWORD>",
+	"affinity_group":{
+		"name":"<AFFINITY_GROUP_NAME>",
+		"label":"<AFFINITY_GROUP_LABEL>",
+		"location":"<DESIRED_LABEL>"
+	}
+}

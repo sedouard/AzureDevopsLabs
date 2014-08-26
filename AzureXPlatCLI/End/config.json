@@ -1,0 +1,13 @@
+{
+	"vnet_name":"azuretedvnet",
+	"vm_count": "3",
+	"vm_image_name": "b39f27a8b8c64d52b05eac6a62ebad85__Ubuntu-14_04-LTS-amd64-server-20140416.1-en-us-30GB",
+	"vm_base_name":"sedouardmachine",
+	"vm_username":"sedouard",
+	"vm_password":"p@assW0rd",
+	"affinity_group":{
+		"name":"envAffinityGroup",
+		"label":"sedouard",
+		"location":"West US"
+	}
+}
