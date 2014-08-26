@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Markdown Preview</title>
+<style>
+body{font-family:helvetica, arial, freesans, clean, sans-serif;color:#333;line-height:1.6;font-size:14px}.markdown-body{line-height:1.6;font-size:14px}.markdown-body > *:first-child{margin-top:0 !important}.markdown-body > *:last-child{margin-bottom:0 !important}.markdown-body a.absent{color:#c00}.markdown-body h1{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:28px;margin:20px 0 10px;padding:0}.markdown-body h2{font-weight:700;-webkit-font-smoothing:antialiased;color:#000;font-size:24px;border-bottom-color:#ccc;border-bottom-width:1px;border-bottom-style:solid;margin:20px 0 10px;padding:0}.markdown-body h3{font-weight:700;-webkit-font-smoothing:antialiased;font-size:18px;margin:20px 0 10px;padding:0}.markdown-body h4{font-weight:700;-webkit-font-smoothing:antialiased;font-size:16px;margin:20px 0 10px;padding:0}.markdown-body h5{font-weight:700;-webkit-font-smoothing:antialiased;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body h6{font-weight:700;-webkit-font-smoothing:antialiased;color:#777;font-size:14px;margin:20px 0 10px;padding:0}.markdown-body blockquote{color:#777;border-left-color:#ddd;border-left-width:4px;border-left-style:solid;margin:15px 0;padding:0 15px}.markdown-body dl{margin:15px 0;padding:0}.markdown-body table{border-collapse:collapse;margin:15px 0;padding:0}.markdown-body pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;margin:15px 0;padding:6px 10px}.markdown-body li p.first{display:inline-block}.markdown-body dl dt{font-size:14px;font-style:italic;font-weight:700;margin:15px 0 5px;padding:0}.markdown-body dl dt:first-child{padding:0}.markdown-body dl dd{margin:0 0 15px;padding:0 15px}.markdown-body table tr{border-top-color:#ccc;border-top-width:1px;border-top-style:solid;background-color:#fff;margin:0;padding:0}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%}.markdown-body span.frame{overflow:hidden;display:block}.markdown-body span.frame > span{border:1px solid #ddd;width:auto;overflow:hidden;float:left;display:block;margin:13px 0 0;padding:7px}.markdown-body span.frame span img{float:left;display:block}.markdown-body span.frame span span{color:#333;clear:both;display:block;padding:5px 0 0}.markdown-body span.align-center > span{text-align:center;overflow:hidden;display:block;margin:13px auto 0}.markdown-body span.align-center span img{text-align:center;margin:0 auto}.markdown-body span.align-right > span{text-align:right;overflow:hidden;display:block;margin:13px 0 0}.markdown-body span.align-right span img{text-align:right;margin:0}.markdown-body span.float-left{overflow:hidden;margin-right:13px;float:left;display:block}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{overflow:hidden;margin-left:13px;float:right;display:block}.markdown-body span.float-right > span{text-align:right;overflow:hidden;display:block;margin:13px auto 0}.markdown-body pre > code{border:currentColor;white-space:pre;margin:0;padding:0}.markdown-body .highlight pre{border-radius:3px;border:1px solid #ccc;line-height:19px;overflow:auto;font-size:13px;background-color:#f8f8f8;padding:6px 10px}.markdown-body p,.markdown-body li{margin:15px 0}.markdown-body ul,.markdown-body ol{padding-left:30px;margin:15px 0}.markdown-body > h2:first-child,.markdown-body > h1:first-child,.markdown-body > h1:first-child + h2{border:0 currentColor;padding-top:0;margin-top:0}.markdown-body > h3:first-child,.markdown-body > h4:first-child,.markdown-body > h5:first-child,.markdown-body > h6:first-child{padding-top:0;margin-top:0}.markdown-body h1 + p,.markdown-body h2 + p,.markdown-body h3 + p,.markdown-body h4 + p,.markdown-body h5 + p,.markdown-body h6 + p,.markdown-body ul li > :first-child,.markdown-body ol li > :first-child,.markdown-body dl dt > :first-child,.markdown-body dl dd > :first-child,.markdown-body blockquote > :first-child,.markdown-body table tr th > :first-child,.markdown-body table tr td > :first-child{margin-top:0}.markdown-body ul li > :last-child,.markdown-body ol li > :last-child,.markdown-body dl dt > :last-child,.markdown-body dl dd > :last-child,.markdown-body blockquote > :last-child,.markdown-body table tr th > :last-child,.markdown-body table tr td > :last-child{margin-bottom:0}.markdown-body table tr th,.markdown-body table tr td{border:1px solid #ccc;text-align:left;margin:0;padding:6px 13px}.markdown-body span.align-center,.markdown-body span.align-right{overflow:hidden;clear:both;display:block}.markdown-body code,.markdown-body tt{border-radius:3px;border:1px solid #eaeaea;white-space:nowrap;background-color:#f8f8f8;margin:0 2px;padding:0 5px}.markdown-body pre code,.markdown-body pre tt{border:currentColor;background-color:transparent}span.codelanguage{display:none}
+</style>
+</head>
+<body>
+<div class="markdown-body">
+<p><a name="LoadTesting"></a></p>
+
+<h1 id="Load_Testing_Web_Applications_with_Visual_Studio_Online">Load Testing Web Applications with Visual Studio Online</h1>
+
+<hr>
+
+<p><a name="Overview"></a></p>
+
+<h2 id="Overview">Overview</h2>
+
+<p>In this demo, you will learn how to use <strong>&quot;Visual Studio Ultimate&quot;</strong> and <strong>&quot;Visual Studio Online&quot;</strong> to Load Test a Web Application.</p>
+
+<p><a id="goals"></a></p>
+
+<h3 id="Goals">Goals</h3>
+
+<p>In this demo, you will see how to:</p>
+
+<ol>
+<li>Create a <strong>&quot;Web Performance Test&quot;</strong> using <strong>&quot;Visual Studio 2013 Ultimate&quot;</strong></li>
+<li>Create a <strong>&quot;Load Test&quot;</strong> using <strong>&quot;Visual Studio 2013 Ultimate&quot;</strong></li>
+<li>Collect web application performance metrics from Application Insights during load testing.</li>
+<li>Run your load test using <strong>&quot;Visual Studio Online&quot;</strong></li>
+</ol>
+
+<p><a name="technologies"></a></p>
+
+<h3 id="Key_Technologies">Key Technologies</h3>
+
+<ul>
+<li><a href="http://www.visualstudio.com/">Visual Studio Online</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/dn481095.aspx">Application Insights</a></li>
+<li><a href="http://msdn.microsoft.com/en-us/library/dn250793.aspx">Web Performance and Load Tests</a></li>
+</ul>
+
+<p><a name="Setup"></a></p>
+
+<h3 id="Setup_and_Configuration">Setup and Configuration</h3>
+
+<ol>
+<li><p>The Web Performance and Load Tests run in this demo require that you have <strong>Visual Studio 2013 Ultimate</strong>.  You must have the Ultimate edition to do the demo. If you don't have Ultimate, you can get an eval copy from: <a href="http://go.microsoft.com/?linkid=9832446&clcid=0x409">http://go.microsoft.com/?linkid=9832446&amp;clcid=0x409</a> </p></li>
+<li><p>This demo assumes that you have completed the <strong>&quot;Continuous Deployment with Visual Studio Online and Azure Websites&quot;</strong>, and <strong>&quot;Monitoring Web Applications with Application Insights&quot;</strong> demos.  If you haven't, you need to first complete the steps in those demos.</p></li>
+<li><p>This demo requires that the <strong>&quot;Web Test Recorder&quot;</strong>.  To Ensure that it is enabled:</p>
+
+<ul>
+<li><p>Open Internet Explorer, click on the <strong>&quot;Tools&quot;</strong> (<strong>Gear</strong>) icon in the top right corner, and select <strong>&quot;Manage add-ons&quot;</strong> from the pop-up menu:</p>
+
+<p><img src="images/00010-ietools.png?raw=true" alt="00010-IETools" title="IETools">
+</p></li>
+<li><p>In the <strong>&quot;Manage Add-ons&quot;</strong> window, select the entry for the <strong>&quot;Microsoft Web Test Recorder 12.0 Helper&quot;</strong>, and if it's status is <strong>&quot;Disabled&quot;</strong>, click the <strong>&quot;Enable&quot;</strong> button.  </p>
+
+<p><img src="images/00020-enablerecorder.png?raw=true" alt="00020-EnableRecorder" title="Enable Recorder">
+</p></li>
+<li><p>If prompted, turn on the <strong>&quot;Web Test Recorder 12.0&quot;</strong> checkbox, and click <strong>&quot;Enable&quot;</strong></p>
+
+<p><img src="images/00030-enableall.png?raw=true" alt="00030-EnableAll" title="Enable All">
+</p></li>
+<li><p>You can close the <strong>&quot;Manage Add-ons&quot;</strong> window and IE when you are done.</p></li>
+</ul></li>
+<li><p>It is also especially helpful if you have a functioning completed version of the tests in this lab that you can use should the test you configure during the demo fail for some reason. </p></li>
+</ol>
+
+<p><a name="Demo"></a></p>
+
+<h2 id="Demo">Demo</h2>
+
+<p>This demo is composed of the following segments:</p>
+
+<ol>
+<li><a href="#WebPerformanceTest">Create and run a Web Performance Test</a></li>
+<li><a href="#LoadTest">Create a Load Test</a></li>
+<li><a href="#RunLoadTestOnVSO">Run the Load Test using Visual Studio Online</a></li>
+</ol>
+
+<hr>
+
+<p><a name="WebPerformanceTest"></a></p>
+
+<h3 id="Create_and_run_a_Web_Performance_Test">Create and run a Web Performance Test</h3>
+
+<ol>
+<li><p>If necessary, open the web project you worked with during the previous <strong>&quot;Monitoring Web Applications with Application Insights&quot;</strong> demo.</p></li>
+<li><p>In the <strong>Visual Studio</strong> <strong>&quot;Solution Explorer&quot;</strong> window, expand the <strong>&lt;Your Project Name&gt;.Tests</strong> project.  Then, right click on the <strong>&lt;Your Project Name&gt;.Tests</strong> project, and select <strong>&quot;Add&quot;</strong> | <strong>&quot;Web Performance Test&quot;</strong> from the pop-up menu:</p>
+
+<p><img src="images/01010-addwebperformancetest.png?raw=true" alt="01010-AddWebPerformanceTest" title="Add Web Performance Test">
+</p></li>
+<li><p>A <strong>&quot;Web Performance Test&quot;</strong> named <strong>&quot;WebTest1&quot;</strong> (or <strong>&quot;WebTest<em>n</em>&quot;</strong> where <em>n</em> is some number) will be added to the project.  You can rename the WebTest later, but for now, we'll leave it as is. </p></li>
+<li><p>It should also open Internet Explorer with the <strong>&quot;Web Test Recorder&quot;</strong> plug-in open (if the <strong>&quot;Web Test Recorder&quot;</strong> doesn't appear, ensure that you enabled it as described in <strong>&quot;<a href="#Setup">Setup</a>&quot;</strong> above).</p>
+
+<p><img src="images/01020-webtestrecorder.png?raw=true" alt="01020-WebTestRecorder" title="Web Test Recorder">
+</p></li>
+<li><p>In the browser's address bar, enter the URL to the live web site you published previously.  Notice that when you navigate to the address, the address is added to the <strong>&quot;Web Test Recorder&quot;</strong> window&quot;</p>
+
+<p><img src="images/01030-openwebsite.png?raw=true" alt="01030-OpenWebSite" title="Open Web Site">
+</p></li>
+<li><p>Use the links along the top of the website (or by clicking on the <strong>&quot;Hamburger Button&quot;</strong> if needed) to navigate to the <strong>&quot;About&quot;</strong> page, then the <strong>&quot;Contact&quot;</strong> page, and finally back to the <strong>&quot;Home&quot;</strong> page.  Notice that each page is added to the list of URLs in the <strong>&quot;Web Test Recorder&quot;.  Finally, click the **&quot;Stop&quot;</strong> button along the top of the <strong>&quot;Web Test Recorder&quot;</strong> to stop recording:</p>
+
+<p><img src="images/01040-usingwebtestrecorder.png?raw=true" alt="01040-UsingWebTestRecorder" title="Using Web Test Recorder">
+</p></li>
+<li><p>The browser window should close, and you should be returned to the <strong>&quot;WebTest1.webtest&quot;</strong> file in Visual Studio.  Visual Studio will automatically run the Web Test looking for any dynamic parameters that it can configure for you.  In our example, it won't find any.  Just let it complete its attempt. </p>
+<blockquote>
+<p><strong>Note:</strong> Dynamic parameters give you a way to create a dynamic web test that can use different values each time.  This is necessary if you are web testing pages that create, modify, view and delete data.  The IDs, etc would change each time, so we would need a &quot;token&quot; in the URLs and HTTP requests and responses that help us identify and use those dynamic IDs, etc.<br>
+<img src="images/01050-lookingfordynamicparameters.png?raw=true" alt="01050-LookingForDynamicParameters" title="Looking for Dynamic Parameters">
+</p>
+</blockquote></li>
+<li><p>In the <strong>WebTest1.webtest&quot;</strong> window, select a URL in the list, and view it's <strong>&quot;Think Time (seconds)&quot;</strong> Property in the <strong>&quot;Properties Window&quot;</strong>. If needed, put appropriate <strong>Think Times</strong> in for each of the URLs.  When you are done, click the <strong>&quot;Run Test&quot;</strong> icon (flask with play arrow) at the top of the <strong>&quot;WebTest1.webtest&quot;</strong> file to run the test.</p>
+<blockquote>
+<p><strong>Note:</strong> Think times allow the test to simulate how long a human might &quot;think&quot; before moving off to a different page.  This allows the web test to more realistically simulate human users.</p>
+</blockquote>
+<p><img src="images/01060-runtest.png?raw=true" alt="01060-RunTest" title="Run Test">
+</p></li>
+<li><p>Then test will be run, navigating to each of the specified, using the thing times provided.  When it is done, you can select each URL, and view it's results including inspecting the Requests, Repsonses, Context, etc. using the tabs along the bottom of the results window:</p>
+
+<p><img src="images/01070-testresults.png?raw=true" alt="01070-TestResults" title="Test Results">
+</p></li>
+</ol>
+
+<hr>
+
+<p><a name="LoadTest"></a></p>
+
+<h3 id="Create_a_Load_Test">Create a Load Test</h3>
+
+<p>The <strong>&quot;Web Performance Test&quot;</strong> we just created is interesting, and just scratches the surface of what is available.  <a href="http://msdn.microsoft.com/en-us/library/dn250793.aspx">Read the docs</a> for more really cool things you can do with Web Performance tests.  </p>
+
+<p>To really stress our site though, we don't want a one-off run of a test.  We want to run the test a bunch of times and as if it was being run by a number of users at once.  For that, we need a <strong>&quot;Load Test&quot;</strong>.</p>
+
+<ol>
+<li><p>In the Visual Studio <strong>&quot;Solution Explorer&quot;</strong>, right click on the <strong>&lt;Your Project Name&gt;.Tests</strong> project, and select <strong>&quot;Add&quot;</strong> | <strong>&quot;Load Test...&quot;</strong> from the pop-up menu:</p>
+
+<p><img src="images/02010-addloadtest.png?raw=true" alt="02010-AddLoadTest" title="Add Load Test">
+</p></li>
+<li><p>The <strong>&quot;New Load Test Wizard&quot;</strong> should appear.  Click <strong>&quot;Next &gt;&quot;</strong> to continue:</p>
+
+<p><img src="images/02020-wizard.png?raw=true" alt="02020-Wizard" title="Wizard">
+</p></li>
+<li><p>On the <strong>&quot;Scenario&quot;</strong> page:</p>
+
+<ul>
+<li>Give the Scenario a name</li>
+<li>Choose <strong>&quot;Use normal distribution centered on recorded think times&quot;</strong></li>
+<li>Leave <strong>&quot;Think time between test iterations&quot;</strong> at <strong>0</strong></li>
+<li>Click <strong>&quot;Next &gt;&quot;</strong> to continue</li>
+</ul>
+
+<p><img src="images/02030-scenario.png?raw=true" alt="02030-Scenario" title="Scenario">
+</p></li>
+<li><p>On the <strong>&quot;Load Pattern&quot;</strong> page:</p>
+
+<ul>
+<li>Select <strong>&quot;Step load&quot;</strong></li>
+<li>Start user count: 1</li>
+<li>Step Duration: 10</li>
+<li>Step user count: 1</li>
+<li>Maximum user count: 20</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> This starts the load test with one user, then every ten seconds adds one more user, until twenty users have been started. These <strong>&quot;users&quot;</strong> are simulated browser clients running on the dev machine.  If you really wanted to simulate a lot of users (more then twenty), you would need additional machines, or better yet, <strong>&quot;Visual Studio Online&quot;</strong>!</p>
+</blockquote>
+<p><img src="images/02040-loadpattern.png?raw=true" alt="02040-LoadPattern" title="Load Pattern">
+</p></li>
+<li><p>On the <strong>&quot;Test Mix Model&quot;</strong> page, select the default values and click <strong>&quot;Next &gt;&quot;</strong> to continue:</p>
+<blockquote>
+<p><strong>Note:</strong> This only make sense when you run more than one test as part of the load test.  We will only run our <strong>&quot;WebTest1&quot;</strong> that we created earlier, so there is no need to desribe how to mix them up.  The same test will be run every time. </p>
+</blockquote>
+<p><img src="images/02050-textmixmodel.png?raw=true" alt="02050-TextMixModel" title="Test Mix Model">
+</p></li>
+<li><p>On the <strong>&quot;Test Mix&quot;</strong> page, click the <strong>&quot;Add...&quot;</strong> button, then select the <strong>&quot;WebTest1&quot;</strong> test from the list of <strong>&quot;Available Tests&quot; and click the right arrow button to add it to the list of **&quot;Selected Tests&quot;, the click **&quot;OK&quot;</strong></p>
+
+<p><img src="images/02060-addwebtest1.png?raw=true" alt="02060-AddWebTest1" title="Add Web Test 1">
+</p></li>
+<li><p>Back on the <strong>&quot;Test Mix&quot;</strong> page, click <strong>&quot;Next &gt;&quot;</strong> to continue:</p>
+
+<p><img src="images/02070-next.png?raw=true" alt="02070-Next" title="Next">
+</p></li>
+<li><p>On the <strong>&quot;Network Mix&quot;</strong> page, leave the default <strong>&quot;LAN&quot;</strong> Network Type, and click <strong>Next &gt;&quot;</strong> to continue:</p>
+<blockquote>
+<p><strong>Note:</strong> When you run Load Tests in Visual Studio Online, you can only use the <strong>LAN</strong> network type. If you were running elsewhere you could add additional network types, but in this case, we'll leave it at just <strong>&quot;LAN&quot;</strong> and move on:</p>
+</blockquote>
+<p><img src="images/02080-networkmix.png?raw=true" alt="02080-NetworkMix" title="NetworkMix">
+</p></li>
+<li><p>On the <strong>&quot;Browser Mix&quot;</strong> page, click the <strong>&quot;Add&quot;</strong> button a few times to add some additional browsers to simulate, and play with the <strong>Distribution</strong> sliders to affect how often each browser is used proportionally, and click <strong>&quot;Next &gt;&quot;</strong> to continue:</p>
+
+<p><img src="images/02090-browsermix.png?raw=true" alt="02090-BrowserMix" title="Browser Mix">
+</p></li>
+<li><p>On the <strong>&quot;Counter Sets&quot;</strong> page, leave the defaults, and click **&quot;Next &gt;&quot; to continue.</p>
+<blockquote>
+<p><strong>Note:</strong> If you had access to the computer running the web server, you could install the <strong>&quot;Microsoft Monitoring Agent&quot;</strong> on it to allow the collection of performacne counters from the server.  In this demo though, our &quot;web server&quot; is an Azure Web Site, and we can't install the MMA on the Azure Web Site base image at this time.  So for now, we just have to leave the Counter Sets page empty.</p>
+</blockquote>
+<p><img src="images/02100-countersets.png?raw=true" alt="02100-CounterSets" title="Counter Sets">
+</p></li>
+<li><p>Finally, on the <strong>&quot;Run Settings&quot;</strong> page, choose <strong>&quot;Load test duration&quot;</strong> with a 0:0:0 warm-up duration, and a 0:2:0 minute run duration.  Click <strong>&quot;Finish&quot;</strong> to complete the wizard:</p>
+
+<p><img src="images/02110-runsettings.png?raw=true" alt="02110-RunSettings" title="Run Settings">
+</p></li>
+<li><p>You should now see the <strong>&quot;LoadTest1.loadtest&quot;</strong> file open in Visual Studio:</p>
+
+<p><img src="images/02120-loadtest1.png?raw=true" alt="02120-LoadTest1" title="LoadTest1">
+</p></li>
+<li><p>Next, we'll allow our load test to collection performance data about the web site using Application Insights.  <strong><em>This only works though when the load test is running in Visual Studio Online.</em></strong>  </p></li>
+<li><p>In the <strong>&quot;LoadTest1.loadtest&quot;</strong> window, expand <strong>&quot;Run Settings&quot;</strong> | <strong>&quot;Run Settings1&quot;</strong> | <strong>&quot;Counter Set Mappings&quot;</strong>, and then right-click on the <strong>&quot;Applications&quot;</strong> node, and select <strong>&quot;Get Performance Data from Application Insights&quot;</strong>:</p>
+
+<p><img src="images/02130-getperformance.png?raw=true" alt="02130-GetPerformance" title="Get Performance From Application Insights">
+</p></li>
+<li><p>In the <strong>&quot;Get Performance Data from Application Insights&quot;</strong> window, turn on the checkbox next to the component for your Web Application, and click <strong>&quot;OK&quot;</strong></p>
+<blockquote>
+<p><strong>Note:</strong> Recall from before that we are not collection server level performance counters because our site is running on an Azure Web Site, and you can't currently get server level performance counters from an Azure Web Site (hope to see that change in the future).  So, while we can have the load test collect the performance data this way, there won't be any data to collect in our case.</p>
+</blockquote>
+<p><img src="images/02140-selectcomponent.png?raw=true" alt="02140-SelectComponent" title="Select Component">
+</p></li>
+<li><p><strong><em>OPTIONAL - IF YOU ARE PRESSED FOR TIME, YOU CAN SKIP THIS STEP</em></strong> - You can run the load test now, but it will consume local resources as it does so.  We should be ok though because we set it to only run for two minutes max, and with a &quot;20 user&quot; maximum load. Along the top of the <strong>LoadTest1.loadtest</strong> file, click the <strong>&quot;Run Load Test&quot;</strong> (<strong>Flask with Play Arrow</strong>) icon to run the test.  </p>
+
+<p><img src="images/02150-runloadtest.png?raw=true" alt="02150-RunLoadTest" title="Run Load Test">
+</p></li>
+<li><p>You can monitor the test while it runs.  If see an error, it is likely due to the fact that we told it to include performance data from our app via Application Insights, but that doesn't work when the Load Test is being run locally.  Collecting performance data from Application Insights requires that the Load Test be running in Visual Studio online.  </p>
+
+<p><img src="images/02160-monitortest.png?raw=true" alt="02160-MonitorTest" title="Monitor Test">
+</p></li>
+</ol>
+
+<hr>
+
+<p><a name="RunLoadTestOnVSO"></a></p>
+
+<h3 id="Run_the_Load_Test_using_Visual_Studio_Online">Run the Load Test using Visual Studio Online</h3>
+
+<ol>
+<li><p>We see that we CAN run the load test locally, but if we really wanted to stress the website, we would want to hit it with more than just twenty users for two minutes.  If you want to use higher test loads, you could setup your own test controllers and agents, but that is time and resource intensive.  Instead, we will use Visual Studio Online's load testing capability.  To configure that, we need a <strong>&quot;&#42;.testsettings&quot;</strong> file.  Since we added our Web Performance and Load tests to an existing project, one wasn't created for us automatically.  If we had instead added specifically a new <strong>&quot;Web Performance and Load Test Project&quot;</strong> to our solution, a <strong>&quot;Local.testsettings&quot;</strong> file would have been added to our solution for us.  As is, we need to make one.</p></li>
+<li><p>In the Visual Studio <strong>&quot;Solution Explorer&quot;</strong> window, right click the solution, and select <strong>&quot;Add&quot;</strong> | <strong>&quot;New Solution Folder&quot;</strong> from the pop-up menu: </p>
+
+<p><img src="images/03010-newsolutionfolder.png?raw=true" alt="03010-NewSolutionFolder" title="New Solution Folder">
+</p></li>
+<li><p>Name the new folder, <strong>&quot;Solution Items&quot;</strong>:</p>
+
+<p><img src="images/03020-solutionitems.png?raw=true" alt="03020-SolutionItems" title="Solution Items">
+</p></li>
+<li><p>Right click the new <strong>&quot;Solution Items&quot;</strong> folder, and select <strong>&quot;Add&quot;</strong> | <strong>&quot;New Item...&quot;</strong> from the pop-up menu:</p>
+
+<p><img src="images/03030-addnewitem.png?raw=true" alt="03030-AddNewItem" title="Add New Item">
+</p></li>
+<li><p>In the <strong>&quot;Add New Item - Solution Items&quot;</strong> dialog, select <strong>&quot;Test Settings&quot;</strong> along the left, then, select the <strong>&quot;Test Settings&quot;</strong> project template.  Name the new file <strong>&quot;Local.testsettings&quot;</strong> and click <strong>&quot;Add&quot;</strong> to add the file. </p>
+
+<p><img src="images/03040-addlocal.png?raw=true" alt="03040-AddLocal" title="Add Local Test Settings">
+</p></li>
+<li><p>A <strong>&quot;Test Settings&quot;</strong> window will appear.  Select the <strong>&quot;Run tests using Visual Studio Oneline&quot;</strong> option.  Then click <strong>&quot;Apply&quot;</strong> and <strong>&quot;Close&quot;</strong> to close the window. </p>
+
+<p><img src="images/03050-testsettings.png?raw=true" alt="03050-TestSettings" title="Test Settings">
+</p></li>
+<li><p>Lastly, we need to tell Visual Studio to use the settings in this file when Load Tests are run.  To do so, from the Visual Studio menu bar, select <strong>&quot;TEST&quot;</strong> | <strong>&quot;Test Settings&quot;</strong> | <strong>&quot;Select Test Settings File&quot;</strong>, and then in the <strong>&quot;Open Settings File&quot;</strong> point to the <strong>&quot;Local.testsettings&quot;</strong> file we created previously, and click <strong>&quot;Open&quot;</strong></p>
+
+<p><img src="images/03060-selecttestsettings.png?raw=true" alt="03060-SelectTestSettings" title="Select Test Settings">
+</p></li>
+<li><p>Back in the <strong>&quot;LoadTest1.loadtest&quot;</strong> file, click the <strong>&quot;Run Load Test&quot;</strong> (<strong>Flask with Play Arrow</strong>) icon to run the Load Test on Visual Studio Online:</p>
+<blockquote>
+<p><strong>Note:</strong> You could increase the user count, etc, but we will leave it low to keep the demo quick, and to help consume the demonstrators Visual Studio Online resources.  Note also that because the duration of the test is so low (two minutes) You may not collect much useful information from Application Insights because it takes time for that performance data to collect there.</p>
+</blockquote>
+<p><img src="images/03070-runloadtest.png?raw=true" alt="03070-RunLoadTest" title="Run Load Test">
+</p></li>
+<li><p>You should see the connection initialization with Visual Studio Online start, and within a couple of minutes, the load test should start.  You can switch between the various <strong>Graphs</strong> and <strong>Details</strong> views to monitor its progress:</p>
+
+<p><img src="images/03080-monitortest.png?raw=true" alt="03080-MonitorTest" title="Monitor Test">
+</p></li>
+<li><p>The <strong>&quot;Details&quot;</strong> page gives specific details about the test run, including how many virtual user minutes will be used (Each Visual Studio Online account gets 15,000 virtual user minutes a month.  If you need more you can purchase them by linking your Azure and Visual Studio Online accounts, and then configuring the billing through the Azure portal.</p>
+
+<p><img src="images/03090-details.png?raw=true" alt="03090-Details" title="Details">
+</p></li>
+<li><p><strong><em>For comparison purposes only, don't make this change</em></strong>, here is the same load test, but with a twenty minute duration, and up to two hunder simultaneous users.  It will consume 4000 of my 15,000 virtual user minutes.  FYI, additional Virtual User Minutes can be purchased.  The current price is $0.001USD/minute.  So another 15,000 virtual user minutes would cost $15.00USD.  </p>
+
+<p><img src="images/03095-moredemandingtest.png?raw=true" alt="03095-MoreDemandingTest" title="More Demanding Test">
+</p></li>
+<li><p>When the test is complete, you can download the report from Visual Studio online (note this sometimes takes a couple of minutes before it is available to download, again another reson to have another project with completed load tests that you can view handy):</p>
+
+<p><img src="images/03100-downloadreport.png?raw=true" alt="03100-DownloadReport" title="Download Report">
+</p></li>
+<li><p>Once downloaded you can open the report to view it.  This gives you the same kinds of results you would get if you had run the test locally, or own your own test controller:</p>
+
+<p><img src="images/03110-viewreport.png?raw=true" alt="03110-ViewReport" title="View Report">
+</p>
+
+<p><img src="images/03120-report.png?raw=true" alt="03120-Report" title="Report">
+</p></li>
+<li><p>Contragts!  You made it through a bunch of stuff in this series of demos.  If you plan on keeping your demo project around, you should do one last Check In to get the Web Performance and Load Tests checked in:</p>
+
+<p><img src="images/03130-checkin.png?raw=true" alt="03130-CheckIn" title="CheckIn">
+</p></li>
+</ol>
+
+<hr>
+
+<p><a name="summary"></a></p>
+
+<h2 id="Summary">Summary</h2>
+
+<p>Congraulations!  In this demo you learned the basics of:</p>
+
+<ul>
+<li>Creating Web Performance Tests</li>
+<li>Creating Load Tests</li>
+<li>Running Load Tests using Visual Studio Online</li>
+</ul>
+
+</div>
+</body>
+</html>
