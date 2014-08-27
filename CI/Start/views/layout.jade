@@ -1,0 +1,35 @@
+﻿//Layout.jade defines the layout of the website. It contains the navbar and
+//extension views will populate pageTitle and pageContent blocks
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js')
+  body
+    block navBar
+        nav(class='navbar navbar-default', role='navigation')
+            .container-fluid
+                .navbar-header
+                    button(class='navbar-toggle', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                        span.sronly
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a(class='navbar-brand', href='/#') Node Recipes
+                #bs-example-navbar-collapse-1(class='collapse navbar-collapse')
+                    ul(class='nav navbar-nav')
+                        li
+                            a(href='/recipes/bbq') BBQ
+                        li
+                            a(href='/recipes/brunch') Brunch
+                        li
+                            a(href='/recipes/dessert') Dessert
+                            
+    //These are populated by extension views
+    block pageTitle
+    block pageContent
