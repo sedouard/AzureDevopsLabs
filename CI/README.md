@@ -352,3 +352,7 @@ After you make the code edits, commit and push your changes. The website will de
 ![](ScreenShots/ss25.png)
 
 In our next lab we will use Visual Studio Online to launch a load test for our website and use New Relic to understand how it impacts our application.
+
+## Conclusion
+
+Azure provides integration point such as Git Deployment and scriptable deployment routines which can be used to implement a continuous integration process for a product leveraging 3rd party services. In our example we were able to integrate Azure to Atlassian Bitbucket for source control and New Relic for application telemetry.
