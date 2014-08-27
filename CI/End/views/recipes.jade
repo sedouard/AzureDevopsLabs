@@ -1,0 +1,20 @@
+﻿extends layout
+
+block pageTitle
+    //this will get displayed in the pageTitle block in layout.jade.
+    //This makes a reference backing data model of this page
+    
+    h1 #{recipes.kind}
+block pageContent
+
+    ul
+    each recipe in recipes.list
+        //create a new well for each recipe model
+        .well
+            h2 #{recipe.name}
+            img(src='#{recipe.photo}')
+            h3 Ingredients
+            h5
+                ul
+                each ingredient in recipe.ingredients
+                    li=ingredient

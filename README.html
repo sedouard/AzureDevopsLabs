@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+</head>
+<body>
+<h1>Azure Dev Ops</h1>
+
+<hr><h2>Objectives</h2>
+
+<p>At the end of this lab you will know</p>
+
+<pre><code>1) The fundamental benefits of good DevOps practices
+2) How Azure integrates to 1st and 3rd Party DevOps solutions
+3) Our main competitors and their strengths and weaknesses
+</code></pre>
+
+<h2>Introduction</h2>
+
+<p>Devops is a term that is almost as abstract as 'The Cloud'. It can mean a variety of things and is sort of a clash between Software Development and IT Operations.</p>
+
+<p>In short though DevOps can be defined as the operations needed to deliver high quality software to your customers as fast as possible. This can be operations such as server management, continuous build integration, test automation as well as telemetry systems to gain product insights.</p>
+
+<h2>The Azure Cross Platform Command Line (CLI) Interface</h2>
+
+<p>Azure offers two CLI's, one based on powershell with a variety of cmdlets. The other is a cross platform CLI and is based on Node.js. This lab will focus on the Node.js toolset since it will work in all environments</p>
+
+<p>The first thing you want to do before you use the Azure x-platform interface is to <a href="http://nodejs.org/">install node.js</a>.</p>
+
+<h3>Lab 1: Managing Virtual Machines</h3>
+
+<h3>Setting up the X-plat CLI</h3>
+
+<p>To get things going you will need to install the Azure CLI using npm. Execute the following command in a command line window:</p>
+
+<div class="highlight highlight-batch"><pre>npm install azure-cli -g
+</pre></div>
+
+<p>The '-g' means to install the module globally so that you can use the Azure CLI from anywhere on the machine. </p>
+
+<p>Most commands in the CLI require your azure subscription. In order for the tools to have access to your subscription you can either <a href="http://azure.microsoft.com/en-us/documentation/articles/xplat-cli/#configure">use Active Directory authentication</a> (when you log into Azure you are using Azure Active Directory) or your can <a href="https://windows.azure.com/download/publishprofile.aspx">download a publish settings file</a>. The latter is easier for automation as authentication will work as long as the certificate and subscription is valid.</p>
+
+<p>First <a href="https://windows.azure.com/download/publishprofile.aspx">download your publish settings file</a>. You can click on the link or execute the command which will open your default browser:</p>
+
+<div class="highlight highlight-batch"><pre>azure account download
+</pre></div>
+
+<p>Now, import your account settings you just downloaded:</p>
+
+<div class="highlight highlight-batch"><pre>azure account import [path to .publishsettings file]
+</pre></div>
+
+<p>You should get output similar to the following:</p>
+
+<p><a href="ScreenShots/ss1.png" target="_blank"><img src="ScreenShots/ss1.png" alt="" style="max-width:100%;"></a></p>
+
+<p>Executing the main azure command will get you help output and give you an idea of all the things you can do with the toolset:</p>
+
+<div class="highlight highlight-batch"><pre>azure
+</pre></div>
+
+<p><a href="ScreenShots/ss2.png" target="_blank"><img src="ScreenShots/ss2.png" alt="" style="max-width:100%;"></a></p>
+
+<p>Entering the particular command will also bring up the usage for that area of the command line tools. Virtual Machines are particularly useful for DevOps scenarios and can easily be done through the x-plat CLI. The CLI makes it very easy to automate routine tasks with Virtual Machines using scripts. </p>
+
+<p>Lets create a new Virtual Machine. We will create an Ubuntu VM, in order to do so we need to find a VM image. We can fetch a list of available Virtual Machines by executing the command:</p>
+
+<div class="highlight highlight-batch"><pre>azure vm image list 
+</pre></div>
+
+<p>We will get back a big list of public VM images available from Azure. We should select a recent Ubuntu build:</p>
+
+<p><a href="ScreenShots/ss3.png" target="_blank"><img src="ScreenShots/ss3.png" alt="" style="max-width:100%;"></a></p>
+
+<p>In order to create a VM we need a datacenter location for the VM to live. To get a list of valid locations we can place our VM, execute this command:</p>
+
+<div class="highlight highlight-batch"><pre>azure vm location list
+</pre></div>
+
+<p>We can use this location as input to the <strong>vm create</strong> command to create a new VM:</p>
+
+<div class="highlight highlight-batch"><pre>azure vm create <span class="p">&lt;</span><span class="n">yourdomainname</span>&gt; <span class="p">&lt;</span><span class="n">imagename</span>&gt; <span class="p">&lt;</span><span class="n">username</span>&gt; <span class="p">&lt;</span><span class="n">password</span>&gt; --location <span class="s1">'&lt;selected datacenter region&gt;'</span>
+</pre></div>
+
+<p><a href="ScreenShots/ss4.png" target="_blank"><img src="ScreenShots/ss4.png" alt="" style="max-width:100%;"></a></p>
+
+<p>Using a the command line scripting tools available on the platform (usually Batch, Powershell or Bash) we can automate this process in whichever way is needed for your customized DevOps solution. For example, parsing the output of <strong>vm location list</strong> and feeding it into <strong>vm create</strong> can allow you to dynamically select the location of your VM. </p>
+
+<h2>Infrastructure Automation Tools: Puppet</h2>
+
+<p><a href="ScreenShots/ss5.png" target="_blank"><img src="ScreenShots/ss5.png" alt="" style="max-width:100%;"></a></p>
+
+<p>Puppet is a popular infrastructure automation framework which allows you to manage the configuration of your Virtual Machines and the virtual networks they are attached to among other things. Puppet is sold using a Software-as-a-Service model. Puppet is primarily geared toward Linux operating systems.</p>
+
+<p>Most importantly Azure can be integrated to Puppet management environments using the <a href="http://blogs.msdn.com/b/interoperability/archive/2013/12/12/windows-azure-provisioning-of-linux-and-windows-via-puppet.aspx">Azure plugin for Puppet</a>. The plugin provides the automation access to:</p>
+
+<ul class="task-list">
+<li>Virtual Machines</li>
+<li>Virtual Networks</li>
+<li>SQL Servers</li>
+</ul><h2>Infrastructure Automation Tools: Chef</h2>
+
+<p><a href="ScreenShots/ss6.png" target="_blank"><img src="ScreenShots/ss6.png" alt="" style="max-width:100%;"></a></p>
+
+<p>Similar to Puppet, Chef is another popular framework that automates IT operations and allows for powerful scripting. Its mostly geared toward Unix/Linux system administration however they are expanding to Windows Servers. Chef is sold using a Software-as-a-Service model</p>
+
+<p>What is important to know is that Chef can run on Azure and integrate to Azure using Knife, a Chef plugin which allows for the manipulation of the following Azure Services:</p>
+
+<ul class="task-list">
+<li>Virtual Machines</li>
+<li>Virtual Networks</li>
+<li>SQL Servers</li>
+</ul><p>You can read more about the partnership between Chef and Microsoft <strong><a href="http://www.getchef.com/partners/microsoft/">here</a></strong>.</p>
+
+<p><strong><a href="http://learn.getchef.com/rhel/get-a-virtual-machine/">This training lab</a></strong> will walk you through the basics of creating Chef recipes, which are automation files for server configuration.</p>
+
+<h2>Compete Services: Atlassian</h2>
+
+<p>Atlassian is a compete Cloud DevOps platform. Atlassian offers a host of rich Devops and Application Lifecycle Management tools such as:</p>
+
+<ul class="task-list">
+<li>Source Control with Bitbucket</li>
+<li>Continuous Integration Builds and Deployments with Bamboo</li>
+<li>Issue tracking with JIRA</li>
+<li>Collaboration platform with </li>
+</ul><p>Atlassian has a suite of Software-as-a-Service products which you can use for most Dev Ops scenarios including collaboration and project management services.</p>
+
+<p>Although Atlassian is a compete service to Visual Studio Online it has integration points whioch can be used with Azure.</p>
+
+<h3>Lab 2: Continuous Deployment using Bitbucket and Azure Websites</h3>
+
+<p><strong>Objectives</strong></p>
+
+<p>After this lab you will learn:</p>
+
+<ul class="task-list">
+<li>Link a 3rd party Source Control Provider to Azure</li>
+<li>Deploy code from a 3rd party to Azure Websites </li>
+</ul><p>One of the most basic DevOps scenarios for is to be able to deploy your application from either your development or production environment to your Website upon committing code to the repository. This process is called Continuous Integration or Continuous Delivery.</p>
+
+<p>Bitbucket and other source control services such as Github provide web hooks from their platform to deploy code bases to cloud services like Azure Websites.  </p>
+
+<p>In this demo we will deploy a basic Express app to Azure via Bitbucket Git repository. The first step is to install express and the express-generator:</p>
+
+<pre><code>npm install -g express-generator
+</code></pre>
+
+<p>We will then create a basic Express website, go to the website root, and install the required dependencies:</p>
+
+<pre><code>express --css stylus azuredevopsteddemo
+cd azuredevopsteddemo
+npm install
+</code></pre>
+
+<p>If you haven't already <a href="https://bitbucket.org/account/signup/">signed up for a free BitBucket account</a>, now is a good time to do so. In the Bitbucket dashboard, we will create a new repository to host our website:</p>
+
+<p><a href="ScreenShots/ss7.png" target="_blank"><img src="ScreenShots/ss7.png" alt="" style="max-width:100%;"></a><br><a href="ScreenShots/ss8.png" target="_blank"><img src="ScreenShots/ss8.png" alt="" style="max-width:100%;"></a></p>
+
+<p>Now that we have our repository, in your local website folder, initialize a new repository and set the remote to the BitBucket remote repository which you can find in the Bitbucket dashboard:</p>
+
+<p><a href="ScreenShots/ss9.png" target="_blank"><img src="ScreenShots/ss9.png" alt="" style="max-width:100%;"></a></p>
+
+<div class="highlight highlight-bash"><pre><span class="c"># Create a blank repository</span>
+git init
+<span class="c"># Add all the files in the folder to the repo</span>
+git add .
+<span class="c"># Commit to the local repository</span>
+git commit .
+<span class="c"># Now add the BitBucket remote repostiory (Bitbucket password required)</span>
+git remote <span class="nb">set</span>-url origin https://&lt;USER NAME&gt;@bitbucket.org/&lt;OWNER NAME&gt;/&lt;REPOSITORY NAME&gt;.git
+</pre></div>
+
+<p>Now, before pushing to our repository we will hook up an Azure Website to the BitBucket URL. This is no different than how you would do this for Github or Visual Studio Online. Start by heading to your website portal and click '<strong>Setup deployment from source control</strong>'</p>
+
+<p><a href="ScreenShots/ss10.png" target="_blank"><img src="ScreenShots/ss10.png" alt="" style="max-width:100%;"></a></p>
+
+<p>This will give you a variety of popular source control providers. This is the same process you would go through for Github or Visual Studio Online. Select Bitbucket and enter your credentials. </p>
+
+<p><a href="ScreenShots/ss11.png" target="_blank"><img src="ScreenShots/ss11.png" alt="" style="max-width:100%;"></a></p>
+
+<p>Azure will authenticate to Bitbucket and you can select the repository of choice. Select the repository and branch with your node.js website you wish to deploy:</p>
+
+<p><a href="ScreenShots/ss12.png" target="_blank"><img src="ScreenShots/ss12.png" alt="" style="max-width:100%;"></a></p>
+
+<p>Now, because we haven't pushed to our repository, there won't be any deployments and your website will just have a blank placeholder:</p>
+
+<p><a href="ScreenShots/ss13.png" target="_blank"><img src="ScreenShots/ss13.png" alt="" style="max-width:100%;"></a></p>
+
+<p>If we go back to our console and push our commit to the repository, we will trigger the first deployment of the web service:</p>
+
+<div class="highlight highlight-bash"><pre><span class="c"># Push commit to remote repository in Bitbucket</span>
+git push origin master
+</pre></div>
+
+<p>Now if you go back to the 'Deployments' tab in the website you'll notice a new deployment is in process:</p>
+
+<p><a href="ScreenShots/ss14.png" target="_blank"><img src="ScreenShots/ss14.png" alt="" style="max-width:100%;"></a></p>
+
+<p>Afterwards the deployment becomes active and browsing the site gets. Notice on the deployment item, we can see the author that triggered the deployment and the commit ID. You will also notice that we have a deployment script and some output:</p>
+
+<p><a href="ScreenShots/ss15.png" target="_blank"><img src="ScreenShots/ss15.png" alt="" style="max-width:100%;"></a></p>
+
+<p>Clicking on the commit ID will show you the commit in Bitbucket:</p>
+
+<p><a href="ScreenShots/ss16.png" target="_blank"><img src="ScreenShots/ss16.png" alt="" style="max-width:100%;"></a></p>
+
+<p>In the next lab we'll look at how to do continuous integration tests through Azure Websites</p>
+
+<h3>Lab 3: Running Build Tasks Within Azure Websites</h3>
+
+<p>The most important thing in Continuous Integration is running builds and test passes upon check-in. A really cool feature of Azure websites is the ability to run custom scripts upon deployment. This gives us the opportunity to utilize the compute in azure websites for devops purposes.</p>
+
+<p>We will use <a href="http://gruntjs.com">grunt</a> as our task engine for our node.js website. If you were doing an ASP.net website you could use the %MSBUILD_PATH% environment variable in your script. For this example we will do a simple minify of our app.js file. First, let's install grunt, and <a href="https://github.com/mishoo/UglifyJS">uglify</a>, a grunt plugin that will minify our javascript files.</p>
+
+<div class="highlight highlight-bash"><pre><span class="c">#install grunt</span>
+npm install grunt-cli --save-dev
+npm install grunt --save-dev
+<span class="c">#install uglify grunt plugin</span>
+npm install grunt-contrib-uglify --save-dev
+</pre></div>
+
+<p>Now we can add the following Grunt.js file to the root directory of our website:</p>
+
+<div class="highlight highlight-js"><pre>
+<span class="c1">///////////////////////////////////////////////////////////</span>
+<span class="c1">///Main Grunt wrapper function</span>
+<span class="c1">///////////////////////////////////////////////////////////</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+
+  <span class="c1">//initConfig will take our configuration object. This specifies which tasks</span>
+  <span class="c1">//and plugins we want to use</span>
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+    <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">'package.json'</span><span class="p">),</span>
+    <span class="c1">//specify that we would like to use the uglify plugin with the build and option parameters</span>
+    <span class="nx">uglify</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="c1">//places a timestamp on top of our minified file</span>
+        <span class="nx">banner</span><span class="o">:</span> <span class="s1">'/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today("dd-mm-yyyy") %&gt; */\n'</span>
+      <span class="p">},</span>
+      <span class="nx">build</span><span class="o">:</span> <span class="p">{</span>
+        <span class="c1">//specifies source file(s) and destination.</span>
+        <span class="nx">src</span><span class="o">:</span> <span class="s1">'app.js'</span><span class="p">,</span>
+        <span class="nx">dest</span><span class="o">:</span> <span class="s1">'bin/app.js'</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+
+  <span class="c1">///////////////////////////////////////////////////////////</span>
+  <span class="c1">///Load the uglify plugin and setting it as the default task</span>
+  <span class="c1">///////////////////////////////////////////////////////////</span>
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">'grunt-contrib-uglify'</span><span class="p">);</span>
+
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">'default'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'uglify'</span><span class="p">]);</span>
+
+<span class="p">};</span>
+</pre></div>
+
+<p><strong>GruntFile.js</strong></p>
+
+<p>Now, we will make a minor code change in the <strong>bin\www</strong> file, the main entry point of the website to load app.min.js rather than the unminified version:</p>
+
+<div class="highlight highlight-js"><pre><span class="err">#</span><span class="o">!</span><span class="err">/usr/bin/env node</span>
+<span class="kd">var</span> <span class="nx">debug</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'debug'</span><span class="p">)(</span><span class="s1">'azuredevopsteddemo'</span><span class="p">);</span>
+<span class="c1">// Use app.min.js instead of app.js</span>
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'../app.min.js'</span><span class="p">);</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'port'</span><span class="p">,</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="mi">3000</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'port'</span><span class="p">),</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">debug</span><span class="p">(</span><span class="s1">'Express server listening on port '</span> <span class="o">+</span> <span class="nx">server</span><span class="p">.</span><span class="nx">address</span><span class="p">().</span><span class="nx">port</span><span class="p">);</span>
+<span class="p">});</span>
+
+</pre></div>
+
+<p>To confirm our changes work locally, run Grunt locally:</p>
+
+<div class="highlight highlight-bash"><pre><span class="c"># This will run the default task from GrunFile.js</span>
+grunt
+</pre></div>
+
+<p>You should get output similar to the following:</p>
+
+<p><a href="ScreenShots/ss17.png" target="_blank"><img src="ScreenShots/ss17.png" alt="" style="max-width:100%;"></a></p>
+
+<p>Now the minified app.min.js will be sitting in the root repository folder:</p>
+
+<p><a href="ScreenShots/ss18.png" target="_blank"><img src="ScreenShots/ss18.png" alt="" style="max-width:100%;"></a></p>
+
+<p>We've verified our Grunt task works as expected. Now lets add that step to a custom deployment script. In order to do this we need to use the azure x-plat CLI to create a custom build script for us. Execute the following command from your the root of your directory:</p>
+
+<div class="highlight highlight-bash"><pre><span class="c"># Create a default deployment script for Node.js. The last '.' is the location of the root </span>
+<span class="c"># of the website which is the root of this repository. </span>
+<span class="c"># The output will be deploy.cmd and .deployment. The first contains the deployment commands</span>
+<span class="c"># while the latter contains the name of the script file to run for deployment (deploy.cmd)</span>
+azure site deploymentscript --node --sitePath .
+</pre></div>
+
+<p>This command generates two files:</p>
+
+<ul class="task-list">
+<li>
+<strong>.deployment</strong> - This file contains the command that will be executed by the deployment mechanism (kudu)</li>
+<li>
+<strong>deploy.cmd</strong> - This is the batch file that will be executed. This can be be a bash script or a javascript file.</li>
+</ul><p>Now, lets add this snippet of batch script after the Deployment banner. Note this script can actually be written in Bash or Javascript as well:</p>
+
+<div class="highlight highlight-batch"><pre><span class="c">::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::</span>
+<span class="c">:: Deployment</span>
+<span class="c">:: ----------</span>
+
+<span class="nl">:Deployment</span>
+<span class="k">echo</span> Performing Node.js Deployment
+
+<span class="k">echo</span> Running Build Tasks...
+<span class="k">call</span> <span class="nl">:ExecuteCmd</span> node <span class="nv">%DEPLOYMENT_SOURCE%</span>\node_modules\grunt-cli\bin\grunt
+<span class="k">IF</span> !<span class="k">ERRORLEVEL</span>! <span class="o">NEQ</span> <span class="m">0</span> <span class="k">goto</span> <span class="nl">error</span>
+<span class="k">echo</span> Build Complete!
+<span class="n">//..more</span> deployment stuff below not shown..<span class="n">//</span>
+</pre></div>
+
+<p>In the script above <strong>DEPLOYMENT_SOURCE</strong> is the source repository of the website. This environment variable is provided by Azure Websites.</p>
+
+<p>Commit and push your repository, triggering another deployment. After the deployment is complete, we can see the deployment log on Bitbucket indicates that our build ran successfully:</p>
+
+<p><a href="ScreenShots/ss19.png" target="_blank"><img src="ScreenShots/ss19.png" alt="" style="max-width:100%;"></a><br><a href="ScreenShots/ss20.png" target="_blank"><img src="ScreenShots/ss20.png" alt="" style="max-width:100%;"></a></p>
+
+<p>We can force the build to fail by commiting and pushing an error to our grunt file:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="c1">//INSERT ERROR HERE. The build will fail</span>
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfi</span><span class="p">({</span>
+    <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">'package.json'</span><span class="p">),</span>
+    <span class="nx">uglify</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">banner</span><span class="o">:</span> <span class="s1">'/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today("dd-mm-yyyy") %&gt; */\n'</span>
+      <span class="p">},</span>
+      <span class="nx">build</span><span class="o">:</span> <span class="p">{</span>
+
+        <span class="nx">src</span><span class="o">:</span> <span class="s1">'app.js'</span><span class="p">,</span>
+        <span class="nx">dest</span><span class="o">:</span> <span class="s1">'app.min.js'</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">'grunt-contrib-uglify'</span><span class="p">);</span>
+
+  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">'default'</span><span class="p">,</span> <span class="p">[</span><span class="s1">'uglify'</span><span class="p">]);</span>
+
+<span class="p">};</span>
+</pre></div>
+
+<p>When the deployment is triggered by Azure, we'll see that the deployment fails, the commit that causes the failure (which we can get more detail by clicking on the Bitbucket link) and the exact failure output:</p>
+
+<p><a href="ScreenShots/ss21.png" target="_blank"><img src="ScreenShots/ss21.png" alt="" style="max-width:100%;"></a><br><a href="ScreenShots/ss22.png" target="_blank"><img src="ScreenShots/ss22.png" alt="" style="max-width:100%;"></a></p>
+
+<p>With custom deployment scripts you can run any batch, bash or javascript file upon deployment to define your custom deployment steps. These steps can include building and running validations. Every deployment has an author, commit ID and a result. This enables for fast continuous integration among a development team by providing scalable dev/test resources right from the environment they will be deploying to production.</p>
+
+<h2>Application Telemetry</h2>
+
+<p>Post-deployment is critical in gaining feedback from your application. A variety of solutions exist to collect information about your applications usage and performance while in production. This lab will cover New Relic a popular application telemetry service which integrates to most platforms. The very nice thing about New Relic is that it integrates to Azure Websites really easily.</p>
+
+<p>To activate new relic, first you neeed to <a href="http://newrelic.com/">sign up for a free New Relic account</a>. You will be provided an API key on your New Relic portal with a few really simple steps to get going. Just copy the newrelic.js file out of the modules folder and place it into the root repository. Give your app a name and enter your license key:</p>
+
+<p><a href="ScreenShots/ss24.png" target="_blank"><img src="ScreenShots/ss24.png" alt="" style="max-width:100%;"></a></p>
+
+<p>After you make the code edits, commit and push your changes. The website will deploy to Azure with New Relic setup for application telemetry. After a few minutes, New Relic will detect your application. To drive some traffic to the website you can use <a href="http://loadimpact.com">loadimpact.com</a> to run a simple load test, just point it to the azure website. After a bit you'll have data coming in to your New Relic portal:</p>
+
+<p><a href="ScreenShots/ss25.png" target="_blank"><img src="ScreenShots/ss25.png" alt="" style="max-width:100%;"></a></p>
+
+<h2>First Party Services: Visual Studio Online</h2>
+
+<p><a href="https://camo.githubusercontent.com/2b8d14cae121cc836a20fd7c2bdf19e5adfea04a/687474703a2f2f7473332e6d6d2e62696e672e6e65742f74683f69643d484e2e363038303438393935373731353530343633267069643d312e37" target="_blank"><img src="https://camo.githubusercontent.com/2b8d14cae121cc836a20fd7c2bdf19e5adfea04a/687474703a2f2f7473332e6d6d2e62696e672e6e65742f74683f69643d484e2e363038303438393935373731353530343633267069643d312e37" alt="" data-canonical-src="http://ts3.mm.bing.net/th?id=HN.608048995771550463&amp;pid=1.7" style="max-width:100%;"></a></p>
+
+<h3>Overview</h3>
+
+<p>Visual Studio Online offers the following services:</p>
+
+<ul class="task-list">
+<li>Load Testing Services</li>
+<li>Continuous Deployment</li>
+<li>Project Management tools (SCRUM and other models)</li>
+<li>Telemetry via App Insights</li>
+</ul><h3>Lab4: Load Testing Web Applications using Visual Studio Online</h3>
+
+<p>Click <a href="%22Load%20Testing%20in%20VSO/Load%20Testing.md%22">here</a> to open the lab on Load Testing in Visual Studio Online.</p>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

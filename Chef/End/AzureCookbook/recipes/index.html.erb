@@ -1,0 +1,9 @@
+<html>
+     <body>
+        <h1> Welcome to My Demo </h1>
+        <h2> Hello, <%= node["fqdn"]%> !</h2>
+        <P>
+            This server has <%= node["kernel"]["cs_info"]["total_physical_memory"].to_i / 1048576 %> MB of memory.
+        </P>
+     </body>    
+</html> 
