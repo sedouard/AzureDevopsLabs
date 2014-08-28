@@ -2,7 +2,7 @@
   "name": "ExpressWebsite",
   "version": "0.0.0",
   "description": "Azure TED Continous Integration Demo",
-  "main": "app.min.js",
+  "main": "app.js",
   "author": {
     "name": "sedouard",
     "email": ""
