@@ -41,8 +41,4 @@ powershell_script "FWPort80" do
 end
 
 
-# Ensure that the apache service is started 
-service "Apache2" do
-    action :start 
-end
 

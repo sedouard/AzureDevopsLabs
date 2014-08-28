@@ -28,8 +28,6 @@ In this demo, you will see how to:
 
 1. The Web Performance and Load Tests run in this demo require that you have **Visual Studio 2013 Ultimate**.  You must have the Ultimate edition to do the demo. If you don't have Ultimate, you can get an eval copy from: http://go.microsoft.com/?linkid=9832446&clcid=0x409 
 
-1. This demo assumes that you have completed the **"Continuous Deployment with Visual Studio Online and Azure Websites"**, and **"Monitoring Web Applications with Application Insights"** demos.  If you haven't, you need to first complete the steps in those demos.
-
 1. This demo requires that the **"Web Test Recorder"**.  To Ensure that it is enabled:
 	- Open Internet Explorer, click on the **"Tools"** (**Gear**) icon in the top right corner, and select **"Manage add-ons"** from the pop-up menu:
 
@@ -60,7 +58,7 @@ This demo is composed of the following segments:
 <a name="WebPerformanceTest" />
 ### Create and run a Web Performance Test ###
 
-1. If necessary, open the web project you worked with during the previous **"Monitoring Web Applications with Application Insights"** demo.
+1. If necessary createa a new Web Performance Test project in Visual Studio under the C# Templates
 
 1. In the **Visual Studio** **"Solution Explorer"** window, expand the **&lt;Your Project Name&gt;.Tests** project.  Then, right click on the **&lt;Your Project Name&gt;.Tests** project, and select **"Add"** | **"Web Performance Test"** from the pop-up menu:
 
@@ -74,9 +72,7 @@ This demo is composed of the following segments:
 
 1. In the browser's address bar, enter the URL to the live web site you published previously.  Notice that when you navigate to the address, the address is added to the **"Web Test Recorder"** window"
 
-	![01030-OpenWebSite](images/01030-openwebsite.png)
-
-1. Use the links along the top of the website (or by clicking on the **"Hamburger Button"** if needed) to navigate to the **"About"** page, then the **"Contact"** page, and finally back to the **"Home"** page.  Notice that each page is added to the list of URLs in the **"Web Test Recorder".  Finally, click the **"Stop"** button along the top of the **"Web Test Recorder"** to stop recording:
+1. Use the links along the top of the website (or by clicking on the **"Hamburger Button"** if needed) to navigate to the each recipe tab.  Finally, click the **"Stop"** button along the top of the **"Web Test Recorder"** to stop recording:
 
 	![01040-UsingWebTestRecorder](images/01040-usingwebtestrecorder.png)
 
@@ -248,9 +244,7 @@ To really stress our site though, we don't want a one-off run of a test.  We wan
 
 	![03120-Report](images/03120-report.png)
 
-1. Contragts!  You made it through a bunch of stuff in this series of demos.  If you plan on keeping your demo project around, you should do one last Check In to get the Web Performance and Load Tests checked in:
-
-	![03130-CheckIn](images/03130-checkin.png)
+1. Congrats!  You made it through a bunch of stuff in this series of demos.
 
 --- 
 
