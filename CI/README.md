@@ -9,6 +9,7 @@ By the end of this lab you will know:
 - How set up Continuous Delivery from a 3rd party source control service provider
 - Run Continuous Integration Builds and Tests with Azure Websites
 - Associate build breaks with commits and team members
+- Get production telemetry data with New Relic
 
 ## Compete Services: Atlassian
 
@@ -23,12 +24,12 @@ Atlassian has a suite of Software-as-a-Service products which you can use for mo
 
 Although Atlassian is a compete service to Visual Studio Online it has integration points which can be used with Azure.
 
-### Lab 2: Continuous Deployment using Bitbucket and Azure Websites
+### Lab: Continuous Deployment using Bitbucket and Azure Websites
 
 
-One of the most basic DevOps scenarios is to be able to deploy your application from either your development or production environment to your live Website upon committing code to the repository. This process is called Continuous Integration or Continuous Delivery.
+One of the most basic DevOps scenarios is to be able to deploy your application from either your code repository to either your development or production deployment for fast product validation. This process is called Continuous Integration or Continuous Delivery depending on how you set up your process.
 
-[Bitbucket](http://www.bitbucket.com) and other source control services such as [Github](www.github.com) provide web hooks from their platform to deploy code bases to cloud services like Azure Websites.  
+[Bitbucket](http://www.bitbucket.com) and other source control services such as [Github](www.github.com) provide web hooks from their platform to deploy code bases to cloud services like Azure Websites. Azure Websites provides for a compelling continuous integration and deployment by providing git deployment, custom deployment scripts and multiple deployment slots. 
 
 In this demo we will deploy [Node Recipes](http://noderecipes.azurewebsites.net), a simple Node.js application to Azure via Bitbucket Git repository. The first step is copy the **Start** folder and place it in your directory root. Then install the required packages:
 
@@ -85,7 +86,11 @@ Now if you go back to the 'Deployments' tab in the website you'll notice a new d
 
 ![](ScreenShots/ss14.png)
 
-Afterwards the deployment becomes active and browsing the site gets. Notice on the deployment item, we can see the author that triggered the deployment and the commit ID. You will also notice that we have a deployment script and some output:
+Afterwards the deployment becomes active and browsing the site gets gives you the application home page:
+
+![](ScreenShots/ss29.png)
+
+Notice on the deployment item, we can see the author that triggered the deployment and the commit ID. You will also notice that we have a deployment script and some output:
 
 ![](ScreenShots/ss15.png)
 
@@ -95,9 +100,9 @@ Clicking on the commit ID will show you the commit in Bitbucket:
 
 In the next lab we'll look at how to do continuous integration tests through Azure Websites
 
-### Lab 3: Running Build Tasks Within Azure Websites
+### Lab: Running Build Tasks Within Azure Websites
 
-The most important thing in Continuous Integration is running builds and test passes upon check-in. A really cool feature of Azure websites is the ability to run custom scripts upon deployment. This gives us the opportunity to utilize the compute in azure websites for devops purposes.
+The most important thing in Continuous Integration is running builds and test passes upon check-in to validate the integrated product. A really cool feature of Azure websites is the ability to run custom scripts upon deployment. This gives us the opportunity to utilize the compute in azure websites for devops purposes.
 
 We will use [grunt](http://gruntjs.com) as our task engine for our node.js website. If you were doing an ASP.net website you could use the %MSBUILD_PATH% environment variable in your script. For this example we will do a simple minify of our app.js file. First, let's install grunt, and [uglify](https://github.com/mishoo/UglifyJS), a grunt plugin that will minify our javascript files.
 
@@ -109,7 +114,7 @@ npm install grunt --save-dev
 npm install grunt-contrib-uglify --save-dev
 ```
 
-Now we can add the following Grunt.js file to the root directory of our website:
+Now we can add the following Gruntfile.js file to the root directory of our website:
 
 ```js
 
@@ -147,7 +152,7 @@ module.exports = function(grunt) {
 
 };
 ```
-**GruntFile.js**
+**Gruntfile.js**
 
 Now, we will make a minor code change in the **packages.json** file, to change the main entry point from app.min to app.min.js.
 
@@ -177,7 +182,7 @@ Now the minified app.min.js will be sitting in the root repository folder:
 
 ![](ScreenShots/ss18.png)
 
-We can also add some tests to our website. The NodeRecipes app, uses static data in the javascript file [tests/data.js](tests/data.js). We can test this data file by using the [mocha](http://visionmedia.github.io/mocha/) test harness and running it with the [mocha plugin for grunt](https://www.npmjs.org/package/grunt-mocha-test). 
+We can also add some tests to our website. The NodeRecipes app, uses static data in the javascript file [data/recipesData.js](tests/data.js). We can test this data file by using the [mocha](http://visionmedia.github.io/mocha/) test harness and running it with the [mocha plugin for grunt](https://www.npmjs.org/package/grunt-mocha-test). 
 
 We'll install mocha and the grunt plugin for mocha
 
@@ -208,7 +213,10 @@ describe('data', function(){
       console.log(dessertRecipes);
       
       var result = bbqRecipes.list.length > 0;
-
+      assert.equal(true, result);
+      result = brunchRecipes.list.length > 0;
+	  assert.equal(true, result);
+	  result = dessertRecipes.list.length > 0;
       assert.equal(true, result);
     })
   })
@@ -298,11 +306,24 @@ pushd %DEPLOYMENT_TARGET%
 call :ExecuteCmd !NPM_CMD! install --development
 call :ExecuteCmd "%NODE_EXE%" node_modules\grunt-cli\bin\grunt
 IF !ERRORLEVEL! NEQ 0 goto error
+popd
 ```
 
 In the script above, **NODE_EXE** is the pointer to the node executable and **NPM_CMD** is the pointer to node package manager. These environment variable is provided by Azure Websites.
 
-Commit and push your repository, triggering another deployment. After the deployment is complete, we can see the deployment log on Bitbucket indicates that our build ran successfully:
+Add these files to your repository, commit and push:
+
+```batch
+REM Add deployment files to repository
+git add .
+REM Commit them
+git commit .
+REM push them to Bitbucket
+git push origin master
+
+```
+
+This will trigger a new deployment. When Azure sees **.deployment** in the root of your repository it will know to run the specified command in that file for deployment and to not run its default logic. After the deployment is complete, we can see the deployment log on Bitbucket indicates that our continuous integration build and test ran successfully:
 
 ![](ScreenShots/ss19.png)
 ![](ScreenShots/ss27.png)
@@ -345,6 +366,7 @@ Post-deployment is critical in gaining feedback from your application. A variety
 
 To activate new relic, first you need to [sign up for a free New Relic account](http://newrelic.com/). You will be provided an API key on your New Relic portal with a few really simple steps to get going. Just copy the newrelic.js file out of the modules folder and place it into the root repository. Give your app a name and enter your license key:
 
+**Note: do 'npm install newrelic --save** to save to [packages.json](End/packages.json)
 ![](ScreenShots/ss24.png)
 
 After you make the code edits, commit and push your changes. The website will deploy to Azure with New Relic setup for application telemetry. After a few minutes, New Relic will detect your application. To drive some traffic to the website you can use [loadimpact.com](http://loadimpact.com) to run a simple load test, just point it to the azure website. After a bit you'll have data coming in to your New Relic portal:

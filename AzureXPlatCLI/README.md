@@ -94,8 +94,7 @@ The main purpose of the command line interface is to script away routine tasks r
 
 The scripting engine we will use will be Node.js itself. A veriety of options for scripting such as Bash, Batch, Powershell and Grep exist however this lab will use a simple library, [azure-scripty](http://npmjs.org/azure-scripty) to use the azure x-plat cli right from javascript.
 
-To get started, from this folder in your repository, install the required packages
-
+To get started, from the **Start** folder in your repository, install the required packages (note: your repository should be at your drive root or very close to avoid path too long errors)
 ```
 npm install
 ```
@@ -534,7 +533,6 @@ Now our array **vmNames** contains only the VMs we intend on creating (and nulls
                     scripty.invoke(args[1], function (err) {
                         
                         if (err) {
-                            console.log('Vm creation failed: ' + vmNames[args[0]]);
                             return cb(err);
                         }
                         
