@@ -11,7 +11,7 @@ By the end of this lab you will know:
 - Associate build breaks with commits and team members
 - Get production telemetry data with New Relic
 
-## Compete Services: Atlassian
+## Atlassian
 
 Atlassian is a complete Cloud DevOps platform. Atlassian offers a host of rich Devops and Application Lifecycle Management tools such as:
 
