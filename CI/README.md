@@ -13,7 +13,7 @@ By the end of this lab you will know:
 
 ## Atlassian
 
-Atlassian is a complete Cloud DevOps platform. Atlassian offers a host of rich Devops and Application Lifecycle Management tools such as:
+Atlassian is a Cloud DevOps platform. Atlassian offers a host of rich Devops and Application Lifecycle Management tools such as:
 
 - Source Control with Bitbucket
 - Continuous Integration Builds and Deployments with Bamboo
